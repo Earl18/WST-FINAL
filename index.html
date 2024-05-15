@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/icon.png">
+    <title>Brew Haven</title>
+</head>
+<body>
+    <header>
+        <a href="#home " class="logo">
+            <img src="images/logo.gif" alt="">
+        </a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+        <div class="header-icon">
+            <i class='bx bx-cart-alt icon' id="cart-icon"></i>
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <div class="cart-content">
+
+                </div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <button type="button" class="btn-buy">Buy Now</button>
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+            <i class='bx bx-search-alt icon' id="search-icon"></i>
+        </div>
+        <div class="search-box">
+            <input type="search" name="" id="find" placeholder="Search Here...">
+            <ul id="searchResults" class="hidden"></ul>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Start your day <br/> with a coffee</h1>
+            <p>Experience three decades of passion, innovation, and community at The Brew Haven. Since 1985, we've been crafting exceptional coffee experiences in a cozy yet elegant setting. Our commitment to quality, sustainability, and social responsibility shines through in every cup. Join us and discover why every sip tells a story at The Brew Haven.</p>
+            <a href="product.html" class="btn">Shop Now!</a>
+        </div>
+        <div class="home-img">
+            <img src="images/main.png" alt="Coffee background">
+        </div>
+    </section>
+
+    <section class="about reveal">
+        <div class="about-img">
+            <img src="images/about.jpg" alt="">
+        </div>
+        <div class="about-text">
+            <h2>Our History</h2>
+            <p>Nestled in the heart of downtown, The Brew Haven has been a beloved fixture in the community for over three decades. Our story begins in 1985 when founder, Christian Jacob Menancillo, a passionate coffee enthusiast, embarked on a mission to bring exceptional coffee to the bustling streets of our city.</p>
+            <p>Christian's journey began with a small corner shop adorned with cozy armchairs and the comforting aroma of freshly brewed coffee. With dedication and a commitment to quality, The Brew Haven quickly became a haven for locals seeking refuge from the daily grind.</p>
+            <p>Throughout the years, The Brew Haven evolved, adapting to changing tastes and trends while staying true to its roots. In 1998, Christian's trusted friend, Earl, joined the team, bringing with him a flair for innovation and a deep respect for tradition.</p>
+            <a href="about.html" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="products reveal" id="products">
+        <div class="heading">
+            <h2>Our popular products</h2>
+        </div>
+        <div class="products-container">
+            <div class="box">
+               <img src="images/p1.png" alt="" class="product-img">
+               <h3 class="product-title">Espresso Roast Blend Whole Beans</h3>
+                  <div class="content">
+                     <span class="price">$18.95</span>
+                     <a class="add-cart">Add to cart</a>
+                  </div>
+            </div>
+            <div class="box">
+                <img src="images/p2.png" alt="" class="product-img">
+                <h3 class="product-title">Kenya AA Medium Roast Coffee</h3>
+                   <div class="content">
+                      <span class="price">$19.95</span>
+                      <a class="add-cart">Add to cart</a>
+                   </div>
+             </div>
+             <div class="box">
+                <img src="images/p3.png" alt="" class="product-img">
+                <h3 class="product-title">Viennese Dark Roast Coffee</h3>
+                   <div class="content">
+                      <span class="price">$18.95</span>
+                      <a class="add-cart">Add to cart</a>
+                   </div>
+             </div>
+             <div class="box">
+                <img src="images/p4.png" alt="" class="product-img">
+                <h3 class="product-title">Bali Blue Moon Dark Roast Coffee</h3>
+                   <div class="content">
+                      <span class="price">$18.95</span>
+                      <a class="add-cart">Add to cart</a>
+                   </div>
+             </div>
+             <div class="box">
+                <img src="images/p5.png" alt="" class="product-img">
+                <h3 class="product-title">Mocha Java Coffee</h3>
+                   <div class="content">
+                      <span class="price">$19.95</span>
+                      <a class="add-cart">Add to cart</a>
+                   </div>
+             </div>
+             <div class="box">
+                <img src="images/p6.png" alt="" class="product-img">
+                <h3 class="product-title">Brazil Cerrado Light Roast Coffee</h3>
+                   <div class="content">
+                      <span class="price">$18.95</span>
+                      <a class="add-cart">Add to cart</a>
+                   </div>
+             </div>
+        </div>
+        <a href="product.html" class="btn" id="btn">Browse Products</a>
+    </section>
+
+    <section class="customers reveal" id="customers">
+        <div class="heading">
+            <h2>Our customer's Reviews</h2>
+        </div>
+        <div class="customers-container">
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                </div>
+                <p>"The Brew Haven is my go-to spot for a morning pick-me-up! The atmosphere is so cozy and inviting, perfect for catching up with friends or getting lost in a book. The coffee selection is top-notch, and I love that they offer dairy-free milk alternatives. The baristas are always friendly and make the best lattes in town. Highly recommend!"</p>
+                <h2>Jerimy P. Hermoso</h2>
+                <img src="images/rev1.jpg" alt="">
+            </div>
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p>"I stumbled upon The Brew Haven while exploring the city, and I'm so glad I did! The coffee here is fantastic, and the ambiance is so relaxing. It's a great place to escape the hustle and bustle of the city for a while. The only reason I'm not giving it five stars is that I wish they had a few more food options, but overall, it's definitely worth a visit."</p>
+                <h2>Christian Dave Rizarri</h2>
+                <img src="images/rev2.jpg" alt="">
+            </div>
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bx-star'></i>
+                </div>
+                <p>"As a self-proclaimed coffee connoisseur, I can confidently say that The Brew Haven is one of the best coffee shops I've ever been to! The quality of their coffee is exceptional, and I appreciate their commitment to sustainability. The staff is always welcoming and knowledgeable, and the latte art is a beautiful touch. Whether I'm grabbing a quick coffee to go or settling in for a leisurely afternoon, The Brew Haven never disappoints."</p>
+                <h2>Christian Jacob Menancillo</h2>
+                <img src="images/rev3.jpg" alt="">
+            </div>
+        </div>
+        <a href="reviews.html" class="btn" id="btn">More Reviews</a>
+    </section>
+
+    <section class="footer reveal">
+        <div class="footer-box">
+            <h2>Social</h2>
+            <p>Follow us on our social media platforms for a glimpse behind the scenes and share your coffee moments with us using #BrewHaven. Let's stay connected and continue the conversation beyond the cafe. See you online!</p>
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=61559080173594" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://twitter.com/brehaven123" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/havenbrew7/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.tiktok.com/@brewhavencoffeeshop1?lang=en" target="_blank"><i class='bx bxl-tiktok' ></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support Us</h3>
+            <p>Your Donation goes to our community charity</p>
+            <div class="social">
+                <a href="#"><i class='bx bx-credit-card' ></i></a>
+                <a href="#"><i class='bx bx-credit-card-alt' ></i></i></a>
+                <a href="#"><i class='bx bx-credit-card-front' ></i></a>
+                 </div>
+        </div>
+        <div class="footer-box">
+            <h3>Newsletter</h3>
+            <p>Subscribe for latest updates</p>
+            <form name="submit-to-google-sheet">
+              <input type="email" name="Email" placeholder="Your email" class="email">
+              <input type="submit" value="subscribe" class="btn" required>
+              <span id="msg"></span>
+            </form>
+        </div>
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <div class="contact">
+                <span><i class='bx bxs-map' ></i><a href="https://maps.app.goo.gl/xX4CUzTcMgvXySac6" target="_blank">Leon Kilat St, Cebu City, 6000 Cebu</a></span>
+                <span><i class='bx bxs-phone' ></i><a href="telto::09947911593">+63 994 791 1593</a></span>
+                <span><i class='bx bxs-envelope' ></i><a href="mailto::earljustinesierra@gmail.com">brewhaven@gmail.com</a></span>
+            </div>
+        </div>
+    </section>
+    
+    <div class="copyright">
+        <p>&copy; BrewHaven All Right Reserved</p>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
