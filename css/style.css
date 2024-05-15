@@ -32,6 +32,7 @@ img {
 body {
     color: var(--text-color);
     animation: transition 0.75s;
+    overflow-x: hidden;
 }
 
 header {
