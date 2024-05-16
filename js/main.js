@@ -45,6 +45,8 @@ function reveal(){
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
+let buyButton = document.getElementById("buyButton");
+let checkoutButton = document.getElementById("checkoutButton");
 
 cartIcon.onclick = () => {
     cart.classList.add("active");
@@ -78,16 +80,52 @@ function ready(){
         let button = addCart[i];
         button.addEventListener("click", addCartClicked);
     }
-    document.getElementsByClassName("btn-buy")[0].addEventListener("click", buyButtonClicked);
+    buyButton.addEventListener("click", buyButtonClicked);
+    checkoutButton.addEventListener("click", checkoutButtonClicked);
+
+    let cartContent = document.getElementsByClassName("cart-content")[0];
+    if (cartContent.children.length === 0) {
+        buyButton.disabled = true;
+    }
 }
 
 function buyButtonClicked() {
-    alert("Your Order is placed");
-    let cartContent = document.getElementsByClassName("cart-content")[0];
-    while (cartContent.hasChildNodes()) {
-        cartContent.removeChild(cartContent.firstChild);
-    }
+    document.getElementById("myForm").style.display = "block";
+    document.getElementById("modalBackground").style.display = "block";
+
+    alert("Please proceed to payment");
     updatetotal();
+}
+
+function checkoutButtonClicked(event) {
+    event.preventDefault();
+
+    let inputs = document.getElementById("myForm").getElementsByTagName("input");
+
+    let allFilled = true;
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === "") {
+            allFilled = false;
+
+            inputs[i].style.borderColor = "red";
+        } else {
+            inputs[i].style.borderColor = "";
+        }
+    }
+
+    if (allFilled) {
+        alert("Your order is placed!");
+
+        document.getElementById("myForm").style.display = "none";
+        document.getElementById("modalBackground").style.display = "none";
+
+        // Add these lines
+        let cartContent = document.getElementsByClassName("cart-content")[0];
+        while (cartContent.hasChildNodes()) {
+            cartContent.removeChild(cartContent.firstChild);
+        }
+        updatetotal();
+    }
 }
 
 function removeCartItem(event){
@@ -158,10 +196,30 @@ function updatetotal() {
         let quantity = quantityElement.value;
         total = total + price * quantity;
     }
-        total = Math.round(total * 100) / 100;
+    total = Math.round(total * 100) / 100;
 
-        document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+    document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+
+    if (cartBoxes.length > 0) {
+        buyButton.disabled = false;
+    } else {
+        buyButton.disabled = true;
+    }
 }
+
+let modalBackground = document.getElementById("modalBackground");
+
+document.addEventListener('click', function(event) {
+    let isClickInsideForm = document.getElementById("myForm").contains(event.target);
+    let isModalBackgroundClicked = document.getElementById("modalBackground").contains(event.target);
+
+    if (!isClickInsideForm && isModalBackgroundClicked) {
+        document.getElementById("myForm").style.display = "none";
+        document.getElementById("modalBackground").style.display = "none";
+    }
+});
+
+
 
 //SEARCH BAR
 document.addEventListener('DOMContentLoaded', function() {
@@ -220,6 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 });
+
 //SEARCH BAR HIGHLIGHT
 window.addEventListener('DOMContentLoaded', function() {
     const itemToHighlightId = sessionStorage.getItem('itemToHighlight');
@@ -247,7 +306,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyTfAb9rBdGCf2PUO_wGL
       .then(response => {
         msg.innerHTML = "Thank You For Subscribing!";
         setTimeout(() => {
-            msg.innerHTML = ""; // This will clear the message after 3 seconds
+            msg.innerHTML = "";
         }, 3000);
       })
       .catch(error => console.error('Error!', error.message))
@@ -261,11 +320,11 @@ const msg = document.getElementById("msg");
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    msg.innerHTML = "Thank You For Subscribing!"; // Moved outside fetch
+    msg.innerHTML = "Thank You For Subscribing!";
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
             setTimeout(() => {
-                msg.innerHTML = ""; // This will clear the message after 3 seconds
+                msg.innerHTML = "";
             }, 1000);
         })
         .catch(error => console.error('Error!', error.message))
