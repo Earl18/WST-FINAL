@@ -31,7 +31,7 @@
                   <div class="total-title">Total</div>
                   <div class="total-price">$0</div>
               </div>
-              <button type="button" class="btn-buy">Buy Now</button>
+              <button type="button" class="btn-buy" id="buyButton">Buy Now</button>
               <i class='bx bx-x' id="close-cart"></i>
           </div>
           <i class='bx bx-search-alt icon' id="search-icon"></i>
@@ -41,6 +41,77 @@
          <ul id="searchResults" class="hidden"></ul>
       </div>
   </header>
+
+  <section id="modalBackground" style="display: none;">
+   <div id="myForm" class="container" style="display: none;">
+   <form action="">
+       <div class="row">
+           <div class="col">
+               <h3 class="title">billing address</h3>
+               <div class="inputBox">
+                   <span>Full Name :</span>
+                   <input type="text" placeholder="First name Last name" required>
+               </div>
+               <div class="inputBox">
+                   <span>Email :</span>
+                   <input type="email" placeholder="brewhaven@gmail.com" required>
+               </div>
+               <div class="inputBox">
+                   <span>Address :</span>
+                   <input type="text" placeholder="street, House Address" required>
+               </div>
+               <div class="inputBox">
+                   <span>City :</span>
+                   <input type="text" placeholder="Cebu city" required>
+               </div>
+
+               <div class="flex">
+                   <div class="inputBox">
+                       <span>Region :</span>
+                       <input type="text" placeholder="Region VII" required>
+                   </div>
+                   <div class="inputBox">
+                       <span>Zip Code :</span>
+                       <input type="text" placeholder="6000" required>
+                   </div>
+               </div>
+           </div>
+           <div class="col">
+               <h3 class="title">Payment</h3>
+
+               <div class="inputBox">
+                   <span>Cards accepted :</span>
+                   <img src="images/Card.png" alt="">
+               </div>
+               <div class="inputBox">
+                   <span>Name on card :</span>
+                   <input type="text" placeholder="Mr. Brewhaven" required>
+               </div>
+               <div class="inputBox">
+                   <span>Credit card number :</span>
+                   <input type="number" placeholder="1111-2222-3333-4444" required>
+               </div>
+               <div class="inputBox">
+                   <span>Exp month :</span>
+                   <input type="text" placeholder="January" required>
+               </div>
+
+               <div class="flex">
+                   <div class="inputBox">
+                       <span>Exp year :</span>
+                       <input type="number" placeholder="2022" required>
+                   </div>
+                   <div class="inputBox">
+                       <span>CVV :</span>
+                       <input type="text" placeholder="1234" required>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <input type="submit" value="proceed to checkout" class="submit-btn" id="checkoutButton">
+   </form>
+</div>
+</section>
 
     <section class="products position" id="products">
         <div class="heading">
